@@ -108,7 +108,7 @@ adminRouter.post('/admin/admin-analytics' , admin ,async(req,res)=>{
       let FashionEarnings = await FetchCategoriesWiseProducts('Fashion');
 
       let earnings = {
-        totalEarnings,
+        totalgitEarnings,
         mobileEarnings,
         essentialEarnings,
         applianceEarnings,
