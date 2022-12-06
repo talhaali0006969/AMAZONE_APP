@@ -9,7 +9,7 @@ const DB="mongodb://talha00069:talha00069@ac-dzyauag-shard-00-00.rcrxisk.mongodb
 
 // middleware
 
-const PORT = 3000;
+const PORT = process.en.PORT || 3000;
 const app = express();
 app.use(express.json());
 app.use(authRouter);
