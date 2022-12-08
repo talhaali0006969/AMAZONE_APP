@@ -9,7 +9,7 @@ const DB = "mongodb://talha00069:talha00069@ac-dzyauag-shard-00-00.rcrxisk.mongo
 
 // middleware
 
-const PORT = process.env;
+const PORT = process.env || 3000;
 const app = express();
 app.use(express.json());
 app.use(authRouter);
