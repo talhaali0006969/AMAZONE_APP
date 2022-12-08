@@ -5,11 +5,11 @@ const authRouter = require("./routes/auth");
 const productRouter = require("./routes/product");
 const userRouter = require("./routes/user");
 
-const DB="mongodb://talha00069:talha00069@ac-dzyauag-shard-00-00.rcrxisk.mongodb.net:27017,ac-dzyauag-shard-00-01.rcrxisk.mongodb.net:27017,ac-dzyauag-shard-00-02.rcrxisk.mongodb.net:27017/?ssl=true&replicaSet=atlas-o82o0m-shard-0&authSource=admin&retryWrites=true&w=majority";
+const DB = "mongodb://talha00069:talha00069@ac-dzyauag-shard-00-00.rcrxisk.mongodb.net:27017,ac-dzyauag-shard-00-01.rcrxisk.mongodb.net:27017,ac-dzyauag-shard-00-02.rcrxisk.mongodb.net:27017/?ssl=true&replicaSet=atlas-o82o0m-shard-0&authSource=admin&retryWrites=true&w=majority";
 
 // middleware
 
-const PORT =process.env;
+const PORT = process.env;
 const app = express();
 app.use(express.json());
 app.use(authRouter);
