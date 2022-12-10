@@ -52,7 +52,7 @@ const userSchema = mongoose.Schema({
             }
         }
     ],
-    cart:[
+    wish:[
         {
             product: productSchema,
             quantity: {
