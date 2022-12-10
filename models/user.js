@@ -51,6 +51,15 @@ const userSchema = mongoose.Schema({
                 required:true
             }
         }
+    ],
+    cart:[
+        {
+            product: productSchema,
+            quantity: {
+                type:Number,
+                required:true
+            }
+        }
     ]
 });
 
