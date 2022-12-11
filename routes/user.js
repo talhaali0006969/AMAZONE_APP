@@ -180,4 +180,21 @@ userRouter.post("/api/save-user-address", auth, async (req, res) => {
     }
   });
 
+// delete
+
+userRouter.post('/api/delete-product' , admin ,async(req,res)=>{
+
+    try{ 
+       const {id} = req.body;
+       let product = await Product.findByIdAndDelete(id);
+       res.json(product);
+    }
+    catch(e){
+        res.status(500).json({error:e.message});
+    }
+});
+
+
+
+
   module.exports = userRouter;
