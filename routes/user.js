@@ -194,6 +194,38 @@ userRouter.post('/api/delete-product' , auth ,async(req,res)=>{
     }
 });
 
+// delete wish product
+
+ userRouter.delete("/api/remove-from-wish/:id", auth, async (req, res) => {
+        try{
+            const { id } = req.params;
+            const product = await Product.findById(id);
+            let user = await User.findById(req.user);
+    
+                for(let i=0; i<user.wish.length; i++)
+                {
+                    if(user.wish[i].product._id.equals(product._id)){
+                        if(user.wish[i].quantity == 1)
+                        {
+                            user.wish.splice(i,1);
+                        }
+                        else{
+                            user.wish[i].quantity -= 1
+                        }
+                        
+                    }
+                }
+
+    
+            user = await user.save();
+            res.json(user);
+    
+        }
+        catch(e){
+            res.status(500).json({ error: e.message});
+        }
+        });
+
 
 
 
