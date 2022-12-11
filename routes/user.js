@@ -182,7 +182,7 @@ userRouter.post("/api/save-user-address", auth, async (req, res) => {
 
 // delete
 
-userRouter.post('/api/delete-product' , admin ,async(req,res)=>{
+userRouter.post('/api/delete-product' , auth ,async(req,res)=>{
 
     try{ 
        const {id} = req.body;
