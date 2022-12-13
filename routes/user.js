@@ -186,7 +186,7 @@ userRouter.post('/api/delete-product' , auth ,async(req,res)=>{
 
     try{ 
        const {id} = req.body;
-       let product = await Product.findByIdAndDelete(id);
+       let product = await WishProduct.findByIdAndDelete(id);
        res.json(product);
     }
     catch(e){
