@@ -51,7 +51,7 @@ userRouter.post("/api/add-to-cart", auth, async (req, res) => {
 userRouter.post("/api/add-to-wish", auth, async (req, res) => {
     try{
         const { id } = req.body;
-        const product = await Product.findById(id);
+        const product = await WishProduct.findById(id);
         let user = await User.findById(req.user);
 
         if(user.wish.length == 0)
