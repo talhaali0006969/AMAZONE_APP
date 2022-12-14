@@ -94,7 +94,7 @@ adminRouter.get("/admin/analytics" , admin ,async(req,res)=>{
        {
         for(let j=0; j<orders[i].products.length; j++)
         {
-            totalEarnings = orders[i].products[j].quantity * orders[i].products[j].product.price;
+            totalEarnings+= orders[i].products[j].quantity * orders[i].products[j].product.price;
         }
 
        }
